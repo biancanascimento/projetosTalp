@@ -1,0 +1,29 @@
+package br.ucb.interfaces;
+
+public class ImplementaInterface implements CursoDao {
+
+	@Override
+	public void insertCursos() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateCursos() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteCursos() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void selectCursos() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package br.ucb.curs.classes;
+
+public class MainCurso {
+
+	public static void main(String[] args) {
+
+	}
+
+}

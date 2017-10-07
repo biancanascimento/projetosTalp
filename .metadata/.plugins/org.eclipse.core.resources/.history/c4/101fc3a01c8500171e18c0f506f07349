@@ -1,0 +1,9 @@
+package br.ucb.interfaces;
+
+public interface ListarInterface {
+	public void insertCursos();
+	public void updateCursos();
+	public void deleteCursos();
+	public void selectCursos();
+	
+}

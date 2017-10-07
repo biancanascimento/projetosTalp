@@ -1,0 +1,39 @@
+package br.ucb.interfaces;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.ucb.curs.classes.Curso;
+
+public class CursoDaoImpl implements CursoDao {
+	static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("nome_da_unidade_persistencia");
+	EntityManager manager = emf.createEntityManager();
+
+	@Override
+	public void salvarcurso(Curso curso) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void alterarcurso(Curso curso) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void apagarcurso(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void listarcurso(Curso curso) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+	
+}

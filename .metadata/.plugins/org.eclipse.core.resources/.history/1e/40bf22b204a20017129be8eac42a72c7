@@ -1,0 +1,48 @@
+package br.ucb.condominio.entidade;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import br.ucb.condominio.enuns.TipoComodo;
+
+@Entity
+public class Comodo {
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	@ManyToOne
+	private Apartamento aparamento;
+
+	@Enumerated(EnumType.STRING)
+	private TipoComodo tipoComodo;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Apartamento getAparamento() {
+		return aparamento;
+	}
+
+	public void setAparamento(Apartamento aparamento) {
+		this.aparamento = aparamento;
+	}
+
+	public TipoComodo getTipoComodo() {
+		return tipoComodo;
+	}
+
+	public void setTipoComodo(TipoComodo tipoComodo) {
+		this.tipoComodo = tipoComodo;
+	}
+
+}

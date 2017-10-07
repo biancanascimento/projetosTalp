@@ -1,0 +1,5 @@
+package br.ucb.condominio.dao;
+
+public abstract class AbstractCrudDAO {
+
+}

@@ -1,0 +1,63 @@
+package br.ucb.curs.classes;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Curso {
+	
+	private Long id;
+	private String descricao;
+	private int codigo_do_curso;
+	private int quantidade_de_semestres;
+	private EnumTipoArea area;
+	private EnumTipoModalidade modalidade;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public EnumTipoArea getArea() {
+		return area;
+	}
+
+	public void setArea(EnumTipoArea area) {
+		this.area = area;
+	}
+
+	public EnumTipoModalidade getModalidade() {
+		return modalidade;
+	}
+
+	public void setModalidade(EnumTipoModalidade modalidade) {
+		this.modalidade = modalidade;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getCodigo_do_curso() {
+		return codigo_do_curso;
+	}
+
+	public void setCodigo_do_curso(int codigo_do_curso) {
+		this.codigo_do_curso = codigo_do_curso;
+	}
+
+	public int getQuantidade_de_semestres() {
+		return quantidade_de_semestres;
+	}
+
+	public void setQuantidade_de_semestres(int quantidade_de_semestres) {
+		this.quantidade_de_semestres = quantidade_de_semestres;
+	}
+
+}

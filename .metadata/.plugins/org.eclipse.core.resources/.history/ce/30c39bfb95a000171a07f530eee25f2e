@@ -1,0 +1,18 @@
+package br.ucb.condominio.dao;
+
+import javax.persistence.EntityManager;
+
+import org.hibernate.usertype.ParameterizedType;
+
+import br.ucb.condominio.entity.EntityManagerSingleton;
+
+public abstract class AbstractCRUDdao <T> {
+	private EntityManager em;
+	private Class classeGenerica;
+	public AbstractCRUDdao(){
+		em = EntityManagerSingleton.getInstance();
+		classeGenerica = (Class)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+	}
+	
+
+}

@@ -1,0 +1,28 @@
+package br.ucb.condominio.entidade;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Condominio {
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	private String nome;
+	private String cnpj;
+	
+	@OneToMany(mappedBy="condominio", cascade=CascadeType.ALL)
+	private List<Predio> predios;
+	
+	
+	
+
+	
+
+}

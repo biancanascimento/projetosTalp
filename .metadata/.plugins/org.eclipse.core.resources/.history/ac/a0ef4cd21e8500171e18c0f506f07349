@@ -1,0 +1,7 @@
+package br.ucb.interfaces;
+
+public class CursoDaoImpl implements CursoDao {
+	
+
+	
+}

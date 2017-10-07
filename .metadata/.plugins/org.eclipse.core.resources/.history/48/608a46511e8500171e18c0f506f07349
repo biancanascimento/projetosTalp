@@ -1,0 +1,11 @@
+package br.ucb.interfaces;
+
+import br.ucb.curs.classes.Curso;
+
+public interface CursoDao {
+	public void salvarcurso( Curso curso);
+	public void alterarcurso(Curso curso);
+	public void apagarcurso(Curso curso);
+	public void listarcurso(Curso curso);
+	
+}

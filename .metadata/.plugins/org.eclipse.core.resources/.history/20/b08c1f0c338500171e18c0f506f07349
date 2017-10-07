@@ -1,0 +1,13 @@
+package br.ucb.interfaces;
+
+import br.ucb.curs.classes.Curso;
+import java.util.List;
+
+public interface CursoDao {
+	public void salvarcurso(Curso curso);
+	public void alterarcurso(Curso curso);
+	public void apagarcurso(Long curso);
+	public List<Curso> listarCursos();
+	public Long consultarCurso(Long id);
+
+}

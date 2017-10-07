@@ -1,0 +1,27 @@
+package br.ucb.curs.classes;
+
+import br.ucb.interfaces.CursoDao;
+import br.ucb.interfaces.CursoDaoImpl;
+
+public class MainCurso {
+
+	public static void main(String[] args) {
+		
+		CursoDao cursoDAO= new CursoDaoImpl();
+		//cursoDAO.salvarcurso(new Curso("Matematica",0012, 4,EnumTipoArea.EXATAS,EnumTipoModalidade.PRESENCIAL));
+		//cursoDAO.salvarcurso(new Curso("Astronomia",14521,10,EnumTipoArea.EXATAS,EnumTipoModalidade.PRESENCIAL));
+		
+	
+		/*Curso alterCurso = new Curso();
+		alterCurso.setDescricao("Fisica");
+		cursoDAO.alterarcurso(alterCurso);*/
+		
+		for (Curso curso : cursoDAO.listarCursos()) {
+			curso.setDescricao("Fisica");
+			cursoDAO.alterarcurso(curso);
+			//System.out.println(curso);
+		}
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package br.ucb.condominio.entidade;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Comodo {
+	@Id
+	@GeneratedValue
+	
+	private Long id;
+	
+	@ManyToOne
+	private Apartamento aparamento;
+	
+
+}

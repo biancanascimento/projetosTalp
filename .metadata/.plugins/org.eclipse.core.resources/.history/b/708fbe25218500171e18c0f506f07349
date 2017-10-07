@@ -1,0 +1,33 @@
+package br.ucb.interfaces;
+
+import br.ucb.curs.classes.Curso;
+
+public class CursoDaoImpl implements CursoDao {
+
+	@Override
+	public void salvarcurso(Curso curso) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void alterarcurso(Curso curso) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void apagarcurso(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void listarcurso(Curso curso) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+	
+}

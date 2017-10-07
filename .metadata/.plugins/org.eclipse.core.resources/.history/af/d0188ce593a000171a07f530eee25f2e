@@ -1,0 +1,7 @@
+package br.ucb.condominio.entity;
+
+public class EntityManagerSingleton {
+	
+
+
+}

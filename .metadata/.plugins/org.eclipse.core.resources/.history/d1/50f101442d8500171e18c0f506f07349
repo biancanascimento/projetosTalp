@@ -1,0 +1,58 @@
+package br.ucb.interfaces;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+import br.ucb.curs.classes.Curso;
+
+public class CursoDaoImpl implements CursoDao {
+	public EntityManagerFactory getFactory() {
+		return Persistence.createEntityManagerFactory("nome_da_unidade_persistencia");
+	}
+
+	@Override
+	public void salvarcurso(Curso curso) {
+		EntityManager manager = emf.createEntityManager();
+		manager.getTransaction().begin();
+		manager.persist(curso);
+		manager.getTransaction().commit();
+		manager.close();
+	}
+
+	@Override
+	public void alterarcurso(Curso curso) {
+		EntityManager manager = emf.createEntityManager();
+		manager.getTransaction().begin();
+		manager.merge(curso);
+		manager.getTransaction().commit();
+		manager.close();
+			
+	}
+
+	@Override
+	public void apagarcurso(int curso) {
+		EntityManager manager = emf.createEntityManager();
+		EntityManager em = emf.createEntityManager();
+		
+		manager.getTransaction().begin();
+		manager.remove(manager.find(Curso.class, curso));
+		manager.getTransaction().commit();
+		manager.close();
+		em.close();
+		
+	}
+
+	@Override
+	public List<Curso> listarCursos() {
+		EntityManager manager = emf.createEntityManager();
+		TypedQuery<Curso> query = manager.createNamedQuery("Curso.listaTodos", Curso.class);
+		return query.getResultList();
+		
+	}
+
+
+}
